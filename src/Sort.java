@@ -1,4 +1,4 @@
 public interface Sort {
-   <T extends Comparable<? super T>> void sort(T[] arr);
+   <T extends Comparable<? super T>> T[] sort(T[] arr);
 
 }

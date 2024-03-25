@@ -1,7 +1,8 @@
 import java.util.*;
 
 public class BubbleSort implements Sort {
-   public <T extends Comparable<? super T>> void sort(T[] arr) {
+   public <T extends Comparable<? super T>> T[] sort(T[] input) {
+      T[] arr = (T[]) new Comparable[input.length];
       boolean isSorted;
 
       for (int i = 0; i < arr.length; i++) {
@@ -14,9 +15,11 @@ public class BubbleSort implements Sort {
             }
          }
          if (isSorted) {
-            return;
+            return arr;
          }
       }
+
+      return arr;
    }
 
    public <T> void swap(T[] arr, int index1, int index2) {
