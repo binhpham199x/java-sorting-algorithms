@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class MergeSort implements Sort {
+public class MergeSort extends Sort {
    @Override
    public <T extends Comparable<? super T>> T[] sort(T[] arr) {
       int mid = arr.length / 2;

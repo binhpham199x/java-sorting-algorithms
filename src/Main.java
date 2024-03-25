@@ -12,15 +12,17 @@ public class Main {
       Integer[] numbers = generateIntArr(size, min, max);
       System.out.println("Numbers: " + Arrays.toString(numbers));
 
-      Sort bubbleSort = new BubbleSort();
-      useSortingAlgo(bubbleSort, numbers);
+//      Sort bubbleSort = new BubbleSort();
+//      useSortingAlgo(bubbleSort, numbers);
+//
+//      Sort insertionSort = new InsertionSort();
+//      useSortingAlgo(insertionSort, numbers);
+//
+//      Sort mergeSort = new MergeSort();
+//      useSortingAlgo(mergeSort, numbers);
 
-      Sort insertionSort = new InsertionSort();
-      useSortingAlgo(insertionSort, numbers);
-
-      Sort mergeSort = new MergeSort();
-      useSortingAlgo(mergeSort, numbers);
-
+      Sort quickSort = new QuickSort();
+      useSortingAlgo(quickSort, numbers);
    }
 
    public static Integer[] generateIntArr(int size, int min, int max) {
