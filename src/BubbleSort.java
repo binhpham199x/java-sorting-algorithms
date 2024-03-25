@@ -2,7 +2,7 @@ import java.util.*;
 
 public class BubbleSort implements Sort {
    public <T extends Comparable<? super T>> T[] sort(T[] input) {
-      T[] arr = (T[]) new Comparable[input.length];
+      T[] arr = Arrays.copyOf(input, input.length);
       boolean isSorted;
 
       for (int i = 0; i < arr.length; i++) {

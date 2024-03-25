@@ -1,6 +1,8 @@
+import java.util.*;
+
 public class InsertionSort implements Sort {
    public <T extends Comparable<? super T>> T[] sort(T[] input) {
-      T[] arr = (T[]) new Comparable[input.length];
+      T[] arr = Arrays.copyOf(input, input.length);
 
       for (int i = 1; i < arr.length; i++) {
          T current = arr[i];

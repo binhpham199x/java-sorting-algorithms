@@ -12,11 +12,11 @@ public class Main {
       Integer[] numbers = generateIntArr(size, min, max);
       System.out.println("Numbers: " + Arrays.toString(numbers));
 
-//      Sort bubbleSort = new BubbleSort();
-//      useSortingAlgo(bubbleSort, numbers);
-//
-//      Sort insertionSort = new InsertionSort();
-//      useSortingAlgo(insertionSort, numbers);
+      Sort bubbleSort = new BubbleSort();
+      useSortingAlgo(bubbleSort, numbers);
+
+      Sort insertionSort = new InsertionSort();
+      useSortingAlgo(insertionSort, numbers);
 
       Sort mergeSort = new MergeSort();
       useSortingAlgo(mergeSort, numbers);
@@ -36,7 +36,9 @@ public class Main {
    public static <T extends Comparable<? super T>> void useSortingAlgo(Sort sortingAlgo, T[] arr) {
 
       T[] result = sortingAlgo.sort(arr);
+      System.out.println("--------------------------");
+      System.out.println(sortingAlgo.getClass().getName() + ":");
 
-      System.out.println(sortingAlgo.getClass().getName() + ": " + Arrays.toString(result));
+      System.out.println(Arrays.toString(result));
    }
 }
