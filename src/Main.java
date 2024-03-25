@@ -9,21 +9,31 @@ public class Main {
       int size = 20;
 
 
-      int[] numbers = generateIntArr(size, min, max);
+      Integer[] numbers = generateIntArr(size, min, max);
+      System.out.println("Numbers: " + Arrays.toString(numbers));
 
-      int[] BSOut = Arrays.copyOf(numbers, numbers.length);
-      System.out.println("numbers: " + Arrays.toString(BSOut));
+      Sort bubbleSort = new BubbleSort();
+      useSortingAlgo(bubbleSort, numbers);
+
 
 
    }
 
-   public static int[] generateIntArr(int size, int min, int max) {
-      int[] res = new int[size];
+   public static Integer[] generateIntArr(int size, int min, int max) {
+      Integer[] res = new Integer[size];
 
       for (int i = 0; i < size; i++) {
          res[i] = (int) (Math.random() * (max - min + 1) + min);
       }
 
       return res;
+   }
+
+   public static <T extends Comparable<? super T>> void useSortingAlgo(Sort sortingAlgo, T[] arr) {
+      T[] result = Arrays.copyOf(arr, arr.length);
+
+      sortingAlgo.sort(result);
+
+      System.out.println(sortingAlgo.getClass().getName() + ": " + Arrays.toString(result));
    }
 }
