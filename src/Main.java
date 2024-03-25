@@ -15,7 +15,8 @@ public class Main {
       Sort bubbleSort = new BubbleSort();
       useSortingAlgo(bubbleSort, numbers);
 
-
+      Sort insertionSort = new InsertionSort();
+      useSortingAlgo(insertionSort, numbers);
 
    }
 
