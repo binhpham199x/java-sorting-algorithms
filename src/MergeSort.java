@@ -1,3 +1,4 @@
+import java.lang.reflect.*;
 import java.util.*;
 
 public class MergeSort extends Sort {
@@ -20,7 +21,10 @@ public class MergeSort extends Sort {
 
    @SuppressWarnings("unchecked")
    private <T extends Comparable<? super T>> T[] merge(T[] left, T[] right) {
-      T[] res = (T[]) new Comparable[left.length + right.length];
+//      T[] res = (T[]) new Comparable[left.length + right.length];
+      T[] res = (T[]) Array.newInstance(left.getClass().getComponentType(), left.length + right.length);
+
+
 //      if (left[0].compareTo(right[0]) > 0)
       int leftI = 0;
       int rightI = 0;
