@@ -9,10 +9,10 @@ public class Main {
       int size = 20;
 
 
-      int[] numbers = generateIntArr(size, min,max);
-      System.out.println("numbers: "+Arrays.toString(numbers));
+      int[] numbers = generateIntArr(size, min, max);
 
-
+      int[] BSOut = Arrays.copyOf(numbers, numbers.length);
+      System.out.println("numbers: " + Arrays.toString(BSOut));
 
 
    }
